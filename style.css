@@ -294,12 +294,33 @@ select.input { cursor: pointer; }
 
 /* АДАПТИВ */
 @media (max-width: 768px) {
-  .nav { display: none; }
+  .header__inner {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 0 8px;
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 18px;
+    font-size: 14px;
+    width: 100%;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; }
+
   .section { padding: 50px 0; }
   .calc { padding: 22px; }
   .calc__row { grid-template-columns: 1fr; }
   .contacts-card { padding: 28px; }
 }
+
 @media (max-width: 480px) {
   .boosters-grid { grid-template-columns: repeat(3, 1fr); }
 }

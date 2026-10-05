@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор — Boost CS2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🎯</span>
+        <span class="logo__text">BOOST<b>CS2</b></span>
+      </a>
+      <nav class="nav">
+        <a href="calculator.html" class="active">Калькулятор</a>
+        <a href="index.html">Услуги</a>
+        <a href="why.html">Почему мы</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container container--narrow">
+      <h2 class="section__title">Калькулятор буста</h2>
+      <p class="section__subtitle">Укажи начальное и целевое ELO — мы посчитаем стоимость и количество игр</p>
+
+      <div class="calc">
+        <div class="calc__row">
+          <div class="calc__field">
+            <label for="startElo">Начальное ELO</label>
+            <input type="number" id="startElo" class="input" min="900" max="3000" value="900" />
+          </div>
+          <div class="calc__field">
+            <label for="endElo">Целевое ELO</label>
+            <input type="number" id="endElo" class="input" min="900" max="3000" value="1500" />
+          </div>
+        </div>
+
+        <div class="calc__row">
+          <div class="calc__field">
+            <label>Тип буста</label>
+            <div class="calc__toggle" id="typeToggle">
+              <button type="button" class="calc__toggle-btn active" data-type="solo">Solo</button>
+              <button type="button" class="calc__toggle-btn" data-type="party">Party</button>
+            </div>
+          </div>
+          <div class="calc__field">
+            <label>Регион</label>
+            <div class="calc__toggle" id="regionToggle">
+              <button type="button" class="calc__toggle-btn active" data-region="ru">RU</button>
+              <button type="button" class="calc__toggle-btn" data-region="eu">EU (+15%)</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn--primary btn--full btn--lg" id="calcBtn">Рассчитать</button>
+
+        <div class="calc__result" id="calcResult" style="display:none;">
+          <div class="calc__result-row"><span>Разница ELO:</span><b id="calcDiff">—</b></div>
+          <div class="calc__result-row"><span>Количество игр:</span><b id="calcGames">—</b></div>
+          <div class="calc__result-row"><span>Стоимость:</span><b id="calcPrice" class="calc__price">—</b></div>
+          <p class="calc__note">Цена за 1 игру рассчитывается по диапазону текущего ELO. За игру +25 ELO.</p>
+        </div>
+
+        <p class="calc__error" id="calcError" style="display:none;"></p>
+      </div>
+
+      <a href="https://t.me/ILoVeGaBi" target="_blank" class="btn btn--primary btn--full btn--lg" style="margin-top: 24px;">
+        Написать в Telegram
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 BoostCS2. Все права защищены.</p>
+      <p class="footer__note">Не связан с Valve Corporation. CS2 — торговая марка Valve.</p>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

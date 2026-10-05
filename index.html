@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boost CS2 — Услуги</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <span class="logo__icon">🎯</span>
+        <span class="logo__text">BOOST<b>CS2</b></span>
+      </a>
+      <nav class="nav">
+        <a href="calculator.html">Калькулятор</a>
+        <a href="index.html" class="active">Услуги</a>
+        <a href="why.html">Почему мы</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title">Прайс по диапазонам</h2>
+      <p class="section__subtitle">Все цены указаны за 1 игру</p>
+
+      <div class="filters">
+        <div class="filters__categories" id="categoryFilters"></div>
+        <div class="filters__controls">
+          <input type="text" id="searchInput" class="input" placeholder="Поиск по ELO..." />
+          <select id="sortSelect" class="input">
+            <option value="default">Сортировка: по умолчанию</option>
+            <option value="price-asc">Сначала дешёвые</option>
+            <option value="price-desc">Сначала дорогие</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid" id="productsGrid"></div>
+      <p class="empty" id="emptyMessage" style="display:none;">Ничего не найдено. Попробуй другой запрос.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 BoostCS2. Все права защищены.</p>
+      <p class="footer__note">Не связан с Valve Corporation. CS2 — торговая марка Valve.</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__content" id="modalContent"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
